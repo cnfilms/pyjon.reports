@@ -1,8 +1,7 @@
-import sys
 import os
 import tempfile
 import shutil
-from pyPdf import PdfFileWriter, PdfFileReader
+from PyPDF2 import PdfFileWriter, PdfFileReader
 
 from pyjon.reports import ReportTemplate
 from genshi.template import TemplateLoader
@@ -68,7 +67,7 @@ class ReportFactory(object):
                      **kwargs):
         if not template_string and template_file:
             if not self.templates_loader:
-                template_file = open(template_file, 'r')
+                template_file = open(template_file, 'r', encoding='utf8')
                 template_string = template_file.read()
                 template_file.close()
                 template = ReportTemplate(template_string)

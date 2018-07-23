@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '0.6'
+version = '0.7'
 
 setup(name='pyjon.reports',
       version=version,
@@ -26,7 +26,7 @@ setup(name='pyjon.reports',
           'setuptools',
           'genshi >= 0.5',
           'z3c.rml >= 0.7',
-          'pypdf'
+          'PyPDF2'
           # -*- Extra requirements: -*-
       ],
       entry_points="""
